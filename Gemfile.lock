@@ -70,6 +70,12 @@ GEM
       nokogiri (>= 1.5.0)
       rails (>= 3.0.0)
     debug_inspector (0.0.2)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -123,6 +129,7 @@ GEM
     multi_test (0.0.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    orm_adapter (0.5.0)
     pg (0.17.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
@@ -204,6 +211,8 @@ GEM
     uglifier (2.3.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     websocket (1.0.7)
     will_paginate (3.0.4)
     xpath (2.0.0)
@@ -221,6 +230,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   cucumber-rails (= 1.4.0)
   database_cleaner!
+  devise
   factory_girl_rails (= 4.2.0)
   faker (= 1.1.2)
   figaro
