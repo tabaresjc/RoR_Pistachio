@@ -79,3 +79,5 @@ pickle-email-*.html
 
 # Ignore git commit message file
 gitcommit.log
+*.sublime-project
+*.sublime-workspace

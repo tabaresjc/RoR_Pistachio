@@ -104,50 +104,26 @@
 	"buffers":
 	[
 		{
-			"file": "Gemfile",
+			"file": "app/views/layouts/application.html.haml",
 			"settings":
 			{
-				"buffer_size": 1252,
+				"buffer_size": 921,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/user.rb",
+			"file": "app/helpers/application_helper.rb",
 			"settings":
 			{
-				"buffer_size": 273,
+				"buffer_size": 356,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "gitcommit.log",
+			"file": "app/views/layouts/_sidebar.html.haml",
 			"settings":
 			{
-				"buffer_size": 70,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/environments/development.rb",
-			"settings":
-			{
-				"buffer_size": 1194,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/application.rb",
-			"settings":
-			{
-				"buffer_size": 1037,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/visitors_controller.rb",
-			"settings":
-			{
-				"buffer_size": 109,
+				"buffer_size": 681,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +131,23 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 139,
+				"buffer_size": 279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/home.html.haml",
+			"settings":
+			{
+				"buffer_size": 164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gitcommit.log",
+			"settings":
+			{
+				"buffer_size": 147,
 				"line_ending": "Unix"
 			}
 		}
@@ -184,6 +176,26 @@
 	},
 	"file_history":
 	[
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/pages/help.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/pages/about.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/static_pages/home.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/layouts/_navigation.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/layouts/_messages.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/controllers/static_pages_controller.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/assets/javascripts/application.js",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/layouts/_fonts.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/layouts/_admin_theme.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/layouts/_sidebar.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/assets/stylesheets/application.css.scss",
+		"/home/ubuntu/Documents/rails_projects/pistachio/config/routes.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/static_pages/about.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/config/application.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/controllers/visitors_controller.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/views/visitors/index.html.haml",
+		"/home/ubuntu/Documents/rails_projects/pistachio/config/environments/development.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/Gemfile",
+		"/home/ubuntu/Documents/rails_projects/pistachio/app/models/user.rb",
+		"/home/ubuntu/Documents/rails_projects/pistachio/gitcommit.log",
 		"/home/ubuntu/Documents/rails_projects/kanjime/gitcommit.log",
 		"/home/ubuntu/Documents/rails_projects/kanjime/spec/models/user_spec.rb",
 		"/home/ubuntu/Documents/rails_projects/kanjime/app/models/user.rb",
@@ -299,6 +311,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/img/contact-img.png",
 			"has_title",
 			";",
 			"current_user",
@@ -347,28 +360,28 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gemfile",
+					"file": "app/views/layouts/application.html.haml",
 					"settings":
 					{
-						"buffer_size": 1252,
+						"buffer_size": 921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								424,
-								424
+								55,
+								55
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -380,18 +393,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/user.rb",
+					"file": "app/helpers/application_helper.rb",
 					"settings":
 					{
-						"buffer_size": 273,
+						"buffer_size": 356,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								267,
-								267
+								173,
+								173
 							]
 						],
 						"settings":
@@ -406,23 +419,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "gitcommit.log",
+					"file": "app/views/layouts/_sidebar.html.haml",
 					"settings":
 					{
-						"buffer_size": 70,
+						"buffer_size": 681,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								437,
+								437
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -432,25 +445,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "config/environments/development.rb",
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1194,
+						"buffer_size": 279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1114,
-								1114
+								218,
+								218
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -460,25 +471,23 @@
 				},
 				{
 					"buffer": 4,
-					"file": "config/application.rb",
+					"file": "app/views/pages/home.html.haml",
 					"settings":
 					{
-						"buffer_size": 1037,
+						"buffer_size": 164,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1026,
-								1026
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -488,49 +497,23 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/visitors_controller.rb",
+					"file": "gitcommit.log",
 					"settings":
 					{
-						"buffer_size": 109,
+						"buffer_size": 147,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								103,
-								103
+								146,
+								146
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 139,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								134,
-								134
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -587,11 +570,11 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
