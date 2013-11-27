@@ -1,0 +1,19 @@
+/ sidebar
+#sidebar-nav
+  %ul#dashboard-menu
+    - sidebar_links.each do |name, menu|
+      %li{ :class => params[:controller] == name.to_s ? "active" : ""}
+        - if params[:controller] == name.to_s
+          .pointer
+            .arrow
+            .arrow_border
+        %a{:href => menu[:url], :class => menu.has_key?(:childs) ? "dropdown-toggle" : ""  }
+          %i{:class => menu[:icon] }
+          %span= params[:controller].to_s
+          - if menu.has_key?(:childs)
+            %i.icon-chevron-down
+        - if menu.has_key?(:childs)
+          %ul.submenu
+            - menu[:childs].each do |key,child|
+              %li= link_to child[:name], child[:url]
+/ end sidebar

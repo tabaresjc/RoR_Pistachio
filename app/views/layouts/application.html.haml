@@ -1,21 +1,30 @@
 !!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Pistachio'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Pistachio'}"}
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    %title= full_title(yield(:title))
+    %meta{content: "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{:content => content_for?(:description) ? yield(:description) : "Pistachio Website", :name => "description"}/
+    = render 'layouts/admin_theme'
+    / this page specific styles
+    = yield(:custom_css)
+    = render 'layouts/fonts'
     = csrf_meta_tags
   %body
-    -# application layout styled for Twitter Bootstrap 2.3
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      .container
-        .content
-          .row
-            .span12
-              = render 'layouts/messages'
-              = yield
-          %footer
+    = render 'layouts/navigation'
+    = render 'layouts/sidebar'
+    / main container
+    .content
+      / upper main stats
+      #main-stats
+        = yield(:main_stats)
+      / end upper main stats
+      #pad-wrapper
+        = render 'layouts/messages' unless flash.empty?
+        = yield
+    / scripts
+    %script{src: "http://code.jquery.com/jquery-latest.js"}
+    = javascript_include_tag "application"
+    = yield(:custom_js)
+
+
