@@ -9,7 +9,7 @@
             .arrow_border
         %a{:href => menu[:url], :class => menu.has_key?(:childs) ? "dropdown-toggle" : ""  }
           %i{:class => menu[:icon] }
-          %span= params[:controller].to_s
+          %span= menu[:name]
           - if menu.has_key?(:childs)
             %i.icon-chevron-down
         - if menu.has_key?(:childs)

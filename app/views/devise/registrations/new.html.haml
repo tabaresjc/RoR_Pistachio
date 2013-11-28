@@ -1,10 +1,21 @@
-%h2 Sign up
-= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, :required => true, :autofocus => true
-    = f.input :password, :required => true
-    = f.input :password_confirmation, :required => true
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+- content_for :title do
+  Sign up
+- content_for(:custom_css) do
+  / this page specific styles
+  %link(rel="stylesheet" href="/assets/css/compiled/signup.css")
+
+
+.login-wrapper
+  .box
+    .content-wrap
+      %h6 Sign Up
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+        = f.text_field :email, :class => "form-control", :placeholder => "Email", "autocomplete" => "off"
+        = f.password_field :password, :class => "form-control", :placeholder => "Password", "autocomplete" => "off"
+        = f.password_field :password_confirmation, :class => "form-control", :placeholder => "Confirm Password", "autocomplete" => "off"
+        %div.action
+          = f.submit "Create my account", class: "btn-glow primary signup"
+
+  .already
+    %p Already have an account?
+    %a{:href => new_user_session_path } Sign in

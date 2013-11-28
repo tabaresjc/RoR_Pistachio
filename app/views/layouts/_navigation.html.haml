@@ -6,112 +6,20 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    %a.navbar-brand{href: "/"}
-      %img{src: "assets/img/logo.png"}/
+    %a.navbar-brand{ :href => root_path }
+      %img{src: "/assets/img/logo.png"}/
   %ul.nav.navbar-nav.pull-right.hidden-xs
-    %li.hidden-xs.hidden-sm
-      %input.search{type: "text"}/
-    %li.notification-dropdown.hidden-xs.hidden-sm
-      %a.trigger{href: "#"}
-        %i.icon-warning-sign
-        %span.count 8
-      .pop-dialog
-        .pointer.right
-          .arrow
-          .arrow_border
-        .body
-          %a.close-icon{href: "#"}
-            %i.icon-remove-sign
-          .notifications
-            %h3 You have 6 new notifications
-            %a.item{href: "#"}
-              %i.icon-signin
-              New user registration
-              %span.time
-                %i.icon-time
-                13 min.
-            %a.item{href: "#"}
-              %i.icon-signin
-              New user registration
-              %span.time
-                %i.icon-time
-                18 min.
-            %a.item{href: "#"}
-              %i.icon-envelope-alt
-              New message from Alejandra
-              %span.time
-                %i.icon-time
-                28 min.
-            %a.item{href: "#"}
-              %i.icon-signin
-              New user registration
-              %span.time
-                %i.icon-time
-                49 min.
-            %a.item{href: "#"}
-              %i.icon-download-alt
-              New order placed
-              %span.time
-                %i.icon-time
-                1 day.
-            .footer
-              %a.logout{href: "#"} View all notifications
-    %li.notification-dropdown.hidden-xs.hidden-sm
-      %a.trigger{href: "#"}
-        %i.icon-envelope
-      .pop-dialog
-        .pointer.right
-          .arrow
-          .arrow_border
-        .body
-          %a.close-icon{href: "#"}
-            %i.icon-remove-sign
-          .messages
-            %a.item{href: "#"}
-              %img.display{src: "assets/img/contact-img.png"}/
-              .name Alejandra Galvan
-              .msg
-                There are many variations of available, but the majority have suffered alterations.
-              %span.time
-                %i.icon-time
-                13 min.
-            %a.item{href: "#"}
-              %img.display{src: "assets/img/contact-img2.png"}/
-              .name Alejandra Galvan
-              .msg
-                There are many variations of available, have suffered alterations.
-              %span.time
-                %i.icon-time
-                26 min.
-            %a.item.last{href: "#"}
-              %img.display{src: "assets/img/contact-img.png"}/
-              .name Alejandra Galvan
-              .msg
-                There are many variations of available, but the majority have suffered alterations.
-              %span.time
-                %i.icon-time
-                48 min.
-            .footer
-              %a.logout{href: "#"} View all messages
     %li.dropdown
       %a.dropdown-toggle.hidden-xs.hidden-sm{"data-toggle" => "dropdown", href: "#"}
         Your account
         %b.caret
       %ul.dropdown-menu
         %li
-          %a{href: "personal-info.html"} Personal info
+          = link_to "Change password", edit_user_registration_path          
+        %li.divider
         %li
-          %a{href: "#"} Account settings
-        %li
-          %a{href: "#"} Billing
-        %li
-          %a{href: "#"} Export your data
-        %li
-          %a{href: "#"} Send feedback
+          = link_to "Sign out", destroy_user_session_path, method: "delete"
     %li.settings.hidden-xs.hidden-sm
-      %a{href: "personal-info.html", role: "button"}
-        %i.icon-cog
-    %li.settings.hidden-xs.hidden-sm
-      %a{href: "signin.html", role: "button"}
+      = link_to destroy_user_session_path, method: "delete", :role=>"button" do
         %i.icon-share-alt
 / end navbar

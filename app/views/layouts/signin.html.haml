@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title= full_title(yield(:title))
+    %meta{content: "text/html; charset=US-ASCII", "http-equiv" => "Content-Type"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    = render 'layouts/admin_theme'
+    = yield(:custom_css)
+    = render 'layouts/fonts' 
+  %body.login-bg
+    .row-fluid
+      .col-md-12
+        .logo
+          %a{ :href => root_path }
+            %img.logo{ :src => "/assets/img/logo-white.png" }
+    - if !flash.empty?
+      .row-fluid{:style => "padding:10px;"}
+        = render 'layouts/messages'
+    %div.login-wrapper      
+      = yield
+    / scripts
+    %script{src: "http://code.jquery.com/jquery-latest.js"}
+    %script{src: "/assets/js/bootstrap.min.js"}
+    %script{src: "/assets/js/theme.js"}

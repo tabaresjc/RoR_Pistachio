@@ -1,9 +1,21 @@
-%h2 Sign in
-= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  .form-inputs
-    = f.input :email, :required => false, :autofocus => true
-    = f.input :password, :required => false
-    = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-  .form-actions
-    = f.button :submit, "Sign in"
-= render "devise/shared/links"
+- content_for :title do
+  Sign in
+- content_for(:custom_css) do
+  / this page specific styles
+  %link(rel="stylesheet" href="/assets/css/compiled/signin.css")
+
+
+%div.box
+  %div.content-wrap
+    %h6 Sign in
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      = f.text_field :email, :class => "form-control", :placeholder => "Email address"
+      = f.password_field :password, :class => "form-control", :placeholder => "Your password"
+      %div.remember
+        = f.check_box :remember_me
+        = f.label :remember_me, "Remember me"
+      = f.submit "Sign in", class: "btn-glow primary login"
+
+%div.no-account
+  %p Don't have an account?
+  %a{:href=> new_user_registration_path} Sign up
