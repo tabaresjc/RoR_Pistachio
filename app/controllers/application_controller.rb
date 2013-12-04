@@ -4,15 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   layout :layout_by_resource
 
-  def after_sign_out_path_for(resource_or_scope)
-    new_user_session_path
-  end
+
 
 protected
 
   def layout_by_resource
     if devise_controller? 
-      if params[:controller] == "devise/sessions" && params[:action] == "new"
+      if params[:controller] == "devise/sessions" && (params[:action] == "new" or params[:action] == "create")
         "signin"
       elsif params[:controller] == "devise/registrations" && params[:action] == "new"
         "signup"
