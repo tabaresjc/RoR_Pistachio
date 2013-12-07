@@ -37,6 +37,7 @@ module Pistachio
     config.to_prepare do
       Devise::SessionsController.layout "signin"
       Devise::RegistrationsController.layout "signup", :only => [:new, :create]
+      Devise::PasswordsController.layout "signup", :only => [:new, :create]
     end    
   end
 end

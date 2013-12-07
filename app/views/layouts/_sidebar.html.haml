@@ -15,10 +15,7 @@
         - if menu.has_key?(:childs)
           %ul.submenu
             - menu[:childs].each do |key,child|
-              %li= link_to child[:name], child[:url]
+              %li= link_to child[:name], child[:url]            
     %li
-      = link_to destroy_user_session_path, :method => :delete do
-        %i.icon-signout
-        %span Signout
-    
+      = button_to 'Sign out', destroy_user_session_path, :class => "btn btn-success btn-block", method: "delete", data: { confirm: 'Are you sure?', disable_with: 'Signing out...' }
 / end sidebar

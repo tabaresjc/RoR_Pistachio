@@ -14,9 +14,10 @@ module ApplicationHelper
         :name => "Home",
         :url => root_path,
         :icon => "icon-home"
-      }
+      }      
     }
 
     return m
   end
+
 end

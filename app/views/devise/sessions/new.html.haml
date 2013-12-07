@@ -19,3 +19,5 @@
 %div.no-account
   %p Don't have an account?
   %a{:href=> new_user_registration_path} Sign up
+  %br/
+  = link_to "Forgot your password?", new_password_path(resource_name)
