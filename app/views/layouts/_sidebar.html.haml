@@ -16,4 +16,9 @@
           %ul.submenu
             - menu[:childs].each do |key,child|
               %li= link_to child[:name], child[:url]
+    %li
+      = link_to destroy_user_session_path, :method => :delete do
+        %i.icon-signout
+        %span Signout
+    
 / end sidebar

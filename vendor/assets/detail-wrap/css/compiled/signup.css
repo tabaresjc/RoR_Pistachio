@@ -160,4 +160,8 @@ body {
   .login-wrapper .box {
     width: 90%;
   }
+
+  .login-wrapper .box .action {
+    margin: 0px -27px;
+  }
 }
